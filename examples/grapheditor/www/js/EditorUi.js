@@ -6463,6 +6463,7 @@ EditorUi.prototype.pan = function () {
 
 EditorUi.prototype.diagram_vsplit = function () {
   /* GS */
+	/*
   var ele = document.getElementById("split-view"); // GS
   var child1 = ele.children[0];
   var child2 = ele.children[2];
@@ -6476,10 +6477,36 @@ EditorUi.prototype.diagram_vsplit = function () {
   ele.className = new_className;
   ele.children[0].style.height = "100%";
   ele.children[2].style.height = "100%";
+  */
+  var ele = document.getElementById("split-view");
+  var className = ele.className;
+  var new_className = className.replace("vertical", "horizontal");
+  ele.className = new_className;
+	
+  ele.children[0].style.width= "50%";
+  ele.children[2].style.width = "50%";
+  ele.children[0].style.height= "100%";
+  ele.children[2].style.height = "100%";
+  
+  ele.children[0].className = ele.children[0].className.replace("horizontal", "vertical");
+  ele.children[2].className = ele.children[2].className.replace("horizontal", "vertical");
+
+  ele.children[0].children[0].style.width= "100%";
+  ele.children[0].children[0].style.height= "100%";
+  ele.children[0].children[2].style.width= "100%";
+  ele.children[0].children[2].style.height= "0%";
+
+  ele.children[2].children[0].style.width= "100%";
+  ele.children[2].children[0].style.height= "100%";
+  ele.children[2].children[2].style.width= "100%";
+  ele.children[2].children[2].style.height= "0%";
+
+
 };
 
 EditorUi.prototype.diagram_hsplit = function () {
   /* GS */
+	/*
   var ele = document.getElementById("split-view"); // GS
   var child1 = ele.children[0];
   var child2 = ele.children[2];
@@ -6493,6 +6520,28 @@ EditorUi.prototype.diagram_hsplit = function () {
   ele.className = new_className;
   ele.children[0].style.width = "100%";
   ele.children[2].style.width = "100%";
+  */
+  var ele = document.getElementById("split-view");
+  var className = ele.className;
+  var new_className = className.replace("horizontal", "vertical");
+  ele.className = new_className;
+  ele.children[0].style.width= "100%";
+  ele.children[2].style.width = "100%";
+  ele.children[0].style.height= "50%";
+  ele.children[2].style.height = "50%";
+  ele.children[0].className = ele.children[0].className.replace( "vertical","horizontal");
+  ele.children[2].className = ele.children[2].className.replace( "vertical","horizontal");
+
+  ele.children[0].children[0].style.width= "100%";
+  ele.children[0].children[0].style.height= "100%";
+  ele.children[0].children[2].style.width= "0%";
+  ele.children[0].children[2].style.height= "100%";
+
+  ele.children[2].children[0].style.width= "100%";
+  ele.children[2].children[0].style.height= "100%";
+  ele.children[2].children[2].style.width= "0%";
+  ele.children[2].children[2].style.height= "100%";
+
 };
 
 EditorUi.prototype.diagram_vsplit2 = function () {
