@@ -202,7 +202,7 @@ Actions.prototype.init = function () {
   this.addAction(
     "hsplit2",
     function () {
-      ui.diagram_hsplit();
+      ui.diagram_hsplit2();
     },
     null,
     "sprite-hsplit2",
