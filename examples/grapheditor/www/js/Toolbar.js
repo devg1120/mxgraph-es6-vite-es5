@@ -220,7 +220,7 @@ Toolbar.prototype.init = function () {
 */
 
   //------------------------------------------------ GS
-  var split = this.addItems(["-", "vsplit", "hsplit","vsplit2","hsplit2"]);
+  var split = this.addItems(["-", "vsplit", "hsplit","vsplit2","hsplit2", "splitfull"]);
   split[1].setAttribute(
     "title",
     m.mxResources.get("vsplit") +
@@ -249,11 +249,19 @@ Toolbar.prototype.init = function () {
       this.editorUi.actions.get("hsplit2").shortcut +
       ")",
   );
+  split[5].setAttribute(
+    "title",
+    m.mxResources.get("split_full") +
+      " (" +
+      this.editorUi.actions.get("splitfull").shortcut +
+      ")",
+  );
 
   this.vsplit_bottun = split[1];
   this.hsplit_bottun = split[2];
   this.vsplit2_bottun = split[3];
   this.hsplit2_bottun = split[4];
+  this.hsplitfull_bottun = split[5];
 
   //------------------------------------------------
   if (sw >= 320) {

@@ -618,6 +618,8 @@ html body .geBigStandardButton:active {
 
 .geSprite-hsplit2 {background-image: url("/dist/images/svg/split-horizontally-cv.svg");}
 
+.geSprite-splitfull {background-image: url("/dist/images/svg/split_full.svg");}
+
 
 /*.geSprite-delete { background-position: 0 -184px; }*/
 .geSprite-delete {background-image: url("/dist/images/svg/delete.svg");}
